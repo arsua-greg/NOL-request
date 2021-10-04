@@ -56,3 +56,8 @@ function ourWidgetsInit()
 }
 
 add_action('widgets_init', 'ourWidgetsInit');
+
+
+add_theme_support('post-thumbnails');
+// add_image_size('small-thumbnail', 100, 100, true);
+the_post_thumbnail(array(100, 100));

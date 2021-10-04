@@ -1,57 +1,62 @@
 <?php get_header(); ?>
 <div class="sect_news">
     <div class="sect_news__container">
-        <!-- <?php echo "<img src = '" . get_field("cat_image", get_queried_object()) . "' >"; ?> -->
-
         <?php dynamic_sidebar('blog-category'); ?>
 
         <div class="sect_news__container--categories">
-            <div class="items">
-                <p><?php get_tag(); ?></p>
-            </div>
+            <?php
+            $tags = get_tags();
+            if ($tags) :
+                foreach ($tags as $tag) : ?>
+                    <div class="items">
+                        <?php
+                        echo '<a href="' . get_tag_link($tag->term_id) . '" rel="tag">' . $tag->name . '  </a>';
+                        ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
 
-        <div class="news_content">
-            <div class="news_content__item">
-                <?php
-                $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+        <div class="post_details">
+            <div class="line"></div>
+            <div class="post_content">
+                <div class="post_content--details">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/common/cat_2.svg" alt="">
 
-                $args = array(
-                    'post_type' => 'post',
-                    'post_status' => 'publish',
-                    'posts_per_page' => 10,
-                    'paged' => $paged,
-                );
-
-                $the_query = new WP_Query($args);
-                ?>
-
-                <?php if ($the_query->have_posts()) : ?>
-
-                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                        <div class="news_content__item--cont">
-                            <div class="title">
-                                <p class="date"><?php echo get_the_date('Y.m.d'); ?></p>
-                                <p class="category">カテゴリー</p>
-                                <?php foreach ((get_the_category()) as $cat) {
-                                    echo $sep . '<a href="' . get_category_link($cat->term_id) . '"  class="' . $cat->slug . '" ' . esc_attr($cat->name) . '">' . $cat->cat_name . '</a>';
-                                } ?>
-                            </div>
-                            <p class="text">
-                                <?php the_title(); ?>
-                            </p>
-                            <a href="<?php echo get_permalink(); ?>">
-                                <p>detail</p>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right_b.svg" alt="">
-                            </a>
-                        </div>
-                    <?php endwhile; ?>
-
+                    <p><?php echo get_the_date('Y/m/d'); ?></p>
+                    <p><?php the_title(); ?></p>
+                </div>
+                <div class="a-post-img-cont">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+                <div class="post_content--details">
+                    <?php the_content(); ?>
+                </div>
             </div>
-            <!-- <div class="pagination">
-                <?php echo easy_wp_pagenavigation($the_query); ?>
-            </div> -->
-        <?php endif; ?>
+            <div class="line"></div>
+            <div class="p-pagination">
+                <div class="p-pagination-width post-left post-pad-left">
+                    <?php previous_post_link('%link', '<svg xmlns="http://www.w3.org/2000/svg" width="15px" viewBox="0 0 15 5.77"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="レイヤー_1" data-name="レイヤー 1"><line class="cls-1" x1="15" y1="2.89" x2="5" y2="2.89"/><polygon points="0 2.89 5 5.77 5 0 0 2.89"/></g></g></svg> prev.') ?>
+                </div>
+
+                <div class="p-pagination-width post-right post-pad-right">
+                    <?php next_post_link('%link', 'next <svg xmlns="http://www.w3.org/2000/svg" width="15px" viewBox="0 0 15 5.77"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="レイヤー_1" data-name="レイヤー 1"><line class="cls-1" y1="2.89" x2="10" y2="2.89"/><polygon points="15 2.89 10 0 10 5.77 15 2.89"/></g></g></svg>') ?>
+                </div>
+            </div>
+        </div>
+        <?php dynamic_sidebar('blog-category'); ?>
+        <div class="sect_news__container--categories">
+            <?php
+            $tags = get_tags();
+            if ($tags) :
+                foreach ($tags as $tag) : ?>
+                    <div class="items">
+                        <?php
+                        echo '<a href="' . get_tag_link($tag->term_id) . '" rel="tag">' . $tag->name . '  </a>';
+                        ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>

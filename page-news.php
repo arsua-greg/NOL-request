@@ -1,7 +1,10 @@
-<?php get_header(); ?>
+<?php
+/* Template Name: Blog Page */
+
+get_header(); ?>
+
 <div class="sect_news">
     <div class="sect_news__container">
-        <!-- <?php echo "<img src = '" . get_field("cat_image", get_queried_object()) . "' >"; ?> -->
 
         <?php dynamic_sidebar('blog-category'); ?>
 
@@ -72,9 +75,9 @@
                     <?php endwhile; ?>
 
             </div>
-            <!-- <div class="pagination">
+            <div class="pagination">
                 <?php echo easy_wp_pagenavigation($the_query); ?>
-            </div> -->
+            </div>
         <?php endif; ?>
         </div>
     </div>
