@@ -1,7 +1,4 @@
-<?php
-/* Template Name: Blog Page */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 <div class="sect_news">
     <div class="sect_news__container">
@@ -30,7 +27,7 @@ get_header(); ?>
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 2,
                     'paged' => $paged,
                 );
 
@@ -73,7 +70,6 @@ get_header(); ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
-
             </div>
             <div class="pagination">
                 <?php echo easy_wp_pagenavigation($the_query); ?>

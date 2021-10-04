@@ -12,19 +12,17 @@
       padding: 50px 25px;
     }
 
-    &--tags {
-      &:nth-of-type(1) {
-        @media only screen and(max-width: 768px) {
-          display: none;
-        }
+    &--sp {
+      display: none;
+
+      @media only screen and(max-width: 768px) {
+        display: block;
       }
+    }
 
-      &:nth-of-type(4) {
+    &--pc {
+      @media only screen and(max-width: 768px) {
         display: none;
-
-        @media only screen and(max-width: 768px) {
-          display: block;
-        }
       }
     }
 
@@ -33,12 +31,6 @@
       align-items: center;
       flex-wrap: wrap;
       padding: 20px 0 0 0;
-
-      &:nth-of-type(2) {
-        @media only screen and(max-width: 768px) {
-          display: none;
-        }
-      }
 
       &:nth-of-type(5) {
         display: none;
@@ -71,6 +63,15 @@
           font-family: noto-sans-cjk-jp, sans-serif;
           font-weight: 700;
         }
+      }
+    }
+
+    .category_image {
+      width: 180px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
       }
     }
 
@@ -410,6 +411,45 @@
         }
       }
     }
+
+    .easy-wp-page-navigation a:hover,
+    .easy-wp-page-navigation span.current {
+      background: #fff;
+      color: #000;
+    }
+
+    .easy-wp-page-navigation a,
+    .easy-wp-page-navigation span {
+      border: none;
+      font-family: "Helvetica", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .easy-wp-page-navigation a,
+    .easy-wp-page-navigation span {
+      color: #000;
+    }
+
+    ul.easy-wp-page-nav {
+      vertical-align: middle;
+    }
+
+    .easy-wp-page-nav {
+      .prev {
+        font-size: 14px;
+        font-family: noto-sans-cjk-jp, sans-serif;
+        font-weight: 700;
+        border: 1px solid #000;
+      }
+
+      .next {
+        font-size: 14px;
+        font-family: noto-sans-cjk-jp, sans-serif;
+        font-weight: 700;
+        border: 1px solid #000;
+      }
+    }
   }
 
   .post_details {
@@ -445,6 +485,12 @@
       &--details {
         padding: 0 40px;
 
+        p {
+          font-size: 16px;
+          font-weight: 700;
+          font-family: noto-sans-cjk-jp, sans-serif;
+        }
+
         @media only screen and (max-width: 768px) {
           padding: 0 20px;
         }
@@ -455,6 +501,97 @@
           @media only screen and (max-width: 768px) {
             padding: 0 20px 55px 20px;
           }
+        }
+
+        .post_ttl {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .tags {
+            display: flex;
+            justify-content: flex-end;
+            justify-content: space-between;
+            .tag_div {
+              .tag {
+                background-color: #e1e1e1;
+                width: 110px;
+                height: 24px;
+                text-align: center;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 700;
+                margin: 0 10px 0 0;
+              }
+            }
+
+            .all {
+              display: none;
+            }
+            .toyama {
+              border: 2px solid #008544;
+              width: 70px;
+              height: 24px;
+              font-size: 14px;
+              font-family: noto-sans-cjk-jp, sans-serif;
+              font-weight: 500;
+              color: #008544;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .nol {
+              border: 2px solid #787878;
+              width: 70px;
+              height: 24px;
+              font-size: 14px;
+              font-family: noto-sans-cjk-jp, sans-serif;
+              font-weight: 500;
+              color: #787878;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .shiga {
+              border: 2px solid #000;
+              width: 70px;
+              height: 24px;
+              font-size: 14px;
+              font-family: noto-sans-cjk-jp, sans-serif;
+              font-weight: 500;
+              color: #000;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .ishikawa {
+              border: 2px solid #ffcd00;
+              width: 70px;
+              height: 24px;
+              font-size: 14px;
+              font-family: noto-sans-cjk-jp, sans-serif;
+              font-weight: 500;
+              color: #ffcd00;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+
+        .sing_date {
+          font-size: 46px;
+          font-family: "Helvetica", sans-serif;
+          font-weight: 700;
+        }
+
+        .sing_ttl {
+          font-size: 22px;
+          font-family: noto-sans-cjk-jp, sans-serif;
+          font-weight: 700;
         }
       }
 

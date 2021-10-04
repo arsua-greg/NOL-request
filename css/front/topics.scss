@@ -39,66 +39,148 @@
           }
         }
 
-        .img {
-          padding: 30px 0 35px 0;
-
-          img {
-            width: 100%;
-          }
+        .slick-dots {
+          color: #fff !important;
         }
 
-        .title_cont {
-          display: flex;
-          padding: 0 0 18px 0;
-          align-items: center;
+        .post_content {
+          .img {
+            padding: 30px 0 35px 0;
 
-          @media only screen and(max-width: 768px) {
-            flex-wrap: wrap;
-          }
-
-          .ttl {
-            font-size: 20px;
-            font-family: "Helvetica", sans-serif;
-            color: #fff;
-            font-weight: 700;
-
-            @media only screen and(max-width: 768px) {
+            img {
               width: 100%;
+              height: auto;
             }
           }
-
-          .category {
+          .title_cont {
             display: flex;
-            justify-content: space-between;
-            width: 230px;
-            padding: 0 0 0 24px;
-            gap: 10px;
+            padding: 0 0 18px 0;
+            align-items: center;
 
             @media only screen and(max-width: 768px) {
-              padding: 15px 0 0 0;
+              flex-wrap: wrap;
             }
 
-            .cat {
-              width: 110px;
-              text-align: center;
+            .ttl {
+              font-size: 20px;
+              font-family: "Helvetica", sans-serif;
               color: #fff;
               font-weight: 700;
-              font-size: 12px;
-              font-family: noto-sans-cjk-jp, sans-serif;
-              padding: 5px 0;
-              border: 1px solid #fff;
+
+              @media only screen and(max-width: 768px) {
+                width: 100%;
+              }
+            }
+
+            .category {
+              display: flex;
+              justify-content: space-between;
+              width: 230px;
+              padding: 0 0 0 24px;
+              gap: 10px;
+              align-items: center;
+
+              @media only screen and(max-width: 768px) {
+                padding: 15px 0 0 0;
+              }
+
+              .cat {
+                width: 110px;
+                text-align: center;
+                color: #fff;
+                font-weight: 700;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                padding: 2px 0;
+                border: 1px solid #fff;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
+
+              .all {
+                display: none;
+              }
+
+              .toyama {
+                border: 2px solid #008544;
+                width: 110px;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 500;
+                color: #008544;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 0;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
+
+              .nol {
+                border: 2px solid #787878;
+                width: 110px;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 500;
+                color: #787878;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 0;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
+
+              .shiga {
+                border: 2px solid #000;
+                width: 110px;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 500;
+                color: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 0;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
+
+              .ishikawa {
+                border: 2px solid #ffcd00;
+                width: 110px;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 500;
+                color: #ffcd00;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 0;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
             }
           }
-        }
-
-        .content {
-          width: 260px;
-          color: #fff;
-          font-size: 20px;
-          font-family: noto-sans-cjk-jp, sans-serif;
-          font-weight: 700;
-          line-height: 30px;
-          text-align: justify;
+          .content {
+            width: 260px;
+            color: #fff;
+            font-size: 20px;
+            font-family: noto-sans-cjk-jp, sans-serif;
+            font-weight: 700;
+            line-height: 30px;
+            text-align: justify;
+          }
         }
 
         .view_all {
@@ -272,6 +354,7 @@
               width: 230px;
               padding: 0 0 0 24px;
               gap: 10px;
+              align-items: center;
 
               @media only screen and(max-width: 768px) {
                 padding: 15px 0 0 0;
@@ -284,10 +367,82 @@
                 font-weight: 700;
                 font-size: 12px;
                 font-family: noto-sans-cjk-jp, sans-serif;
-                padding: 5px 0;
+                padding: 2px 0;
                 border: 1px solid #fff;
 
-                @media only screen and(min-width: 769px) {
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
+
+              .all {
+                display: none;
+              }
+
+              .toyama {
+                border: 2px solid #008544;
+                width: 110px;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 500;
+                color: #008544;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 0;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
+
+              .nol {
+                border: 2px solid #787878;
+                width: 110px;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 500;
+                color: #787878;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 0;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
+
+              .shiga {
+                border: 2px solid #000;
+                width: 110px;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 500;
+                color: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 0;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
+                  width: 100%;
+                }
+              }
+
+              .ishikawa {
+                border: 2px solid #ffcd00;
+                width: 110px;
+                font-size: 12px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 500;
+                color: #ffcd00;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 0;
+
+                @media only screen and(max-width: 1200px) and(min-width: 769px) {
                   width: 100%;
                 }
               }
@@ -303,27 +458,29 @@
             text-align: justify;
           }
 
-          a {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-top: -20px;
+          .permalink {
+            a {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              margin-top: -20px;
 
-            @media only screen and(max-width: 768px) {
-              margin-top: 0;
-            }
+              @media only screen and(max-width: 768px) {
+                margin-top: 0;
+              }
 
-            .detail {
-              text-align: right;
-              font-size: 16px;
-              font-family: noto-sans-cjk-jp, sans-serif;
-              font-weight: 700;
-              color: #fff;
-              padding: 0 10px 0 0;
-            }
+              .detail {
+                text-align: right;
+                font-size: 16px;
+                font-family: noto-sans-cjk-jp, sans-serif;
+                font-weight: 700;
+                color: #fff;
+                padding: 0 10px 0 0;
+              }
 
-            img {
-              width: 15px;
+              img {
+                width: 15px;
+              }
             }
           }
         }

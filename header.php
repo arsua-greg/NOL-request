@@ -31,14 +31,13 @@
 	<link rel="icon" href="img/favicon.ico">
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.jpg" sizes="180x180">
 	<title>NOL 公式サイト</title>
-
+	<!-- SLICK -->
+	<link href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" rel="stylesheet" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
-
-
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery-yycountdown.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/demo1.css" type="text/css" />
@@ -46,14 +45,9 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front/front.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front/topics.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front/news.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.3.1.min.js" charset="utf-8"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/mgGlitch.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/imagesloaded.pkgd.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-numerator.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/demo.js"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js" charset="utf-8"></script>
-	<?php wp_head(); ?>
 
 	<script>
 		(function(d) {
@@ -85,8 +79,8 @@
 			s.parentNode.insertBefore(tk, s)
 		})(document);
 	</script>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-	<header></header>
 	<main id="main">

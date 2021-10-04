@@ -16,19 +16,19 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .sect_news__container--tags:nth-of-type(1) {
-    display: none;
-  }
-}
-
-.sect_news__container--tags:nth-of-type(4) {
+.sect_news__container--sp {
   display: none;
 }
 
 @media only screen and (max-width: 768px) {
-  .sect_news__container--tags:nth-of-type(4) {
+  .sect_news__container--sp {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sect_news__container--pc {
+    display: none;
   }
 }
 
@@ -42,12 +42,6 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 20px 0 0 0;
-}
-
-@media only screen and (max-width: 768px) {
-  .sect_news__container--categories:nth-of-type(2) {
-    display: none;
-  }
 }
 
 .sect_news__container--categories:nth-of-type(5) {
@@ -97,6 +91,15 @@
   font-size: 16px;
   font-family: noto-sans-cjk-jp, sans-serif;
   font-weight: 700;
+}
+
+.sect_news__container .category_image {
+  width: 180px;
+  margin: 0 auto;
+}
+
+.sect_news__container .category_image img {
+  width: 100%;
 }
 
 .sect_news__container .wp-block-categories-list {
@@ -525,6 +528,43 @@
   width: 15px;
 }
 
+.sect_news__container .easy-wp-page-navigation a:hover,
+.sect_news__container .easy-wp-page-navigation span.current {
+  background: #fff;
+  color: #000;
+}
+
+.sect_news__container .easy-wp-page-navigation a,
+.sect_news__container .easy-wp-page-navigation span {
+  border: none;
+  font-family: "Helvetica", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sect_news__container .easy-wp-page-navigation a,
+.sect_news__container .easy-wp-page-navigation span {
+  color: #000;
+}
+
+.sect_news__container ul.easy-wp-page-nav {
+  vertical-align: middle;
+}
+
+.sect_news__container .easy-wp-page-nav .prev {
+  font-size: 14px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 700;
+  border: 1px solid #000;
+}
+
+.sect_news__container .easy-wp-page-nav .next {
+  font-size: 14px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 700;
+  border: 1px solid #000;
+}
+
 .sect_news .post_details {
   max-width: 550px;
   margin: 0 auto;
@@ -563,6 +603,12 @@
   padding: 0 40px;
 }
 
+.sect_news .post_details .post_content--details p {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: noto-sans-cjk-jp, sans-serif;
+}
+
 @media only screen and (max-width: 768px) {
   .sect_news .post_details .post_content--details {
     padding: 0 20px;
@@ -577,6 +623,133 @@
   .sect_news .post_details .post_content--details:last-child {
     padding: 0 20px 55px 20px;
   }
+}
+
+.sect_news .post_details .post_content--details .post_ttl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sect_news .post_details .post_content--details .post_ttl .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sect_news .post_details .post_content--details .post_ttl .tags .tag_div .tag {
+  background-color: #e1e1e1;
+  width: 110px;
+  height: 24px;
+  text-align: center;
+  font-size: 12px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 700;
+  margin: 0 10px 0 0;
+}
+
+.sect_news .post_details .post_content--details .post_ttl .tags .all {
+  display: none;
+}
+
+.sect_news .post_details .post_content--details .post_ttl .tags .toyama {
+  border: 2px solid #008544;
+  width: 70px;
+  height: 24px;
+  font-size: 14px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 500;
+  color: #008544;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sect_news .post_details .post_content--details .post_ttl .tags .nol {
+  border: 2px solid #787878;
+  width: 70px;
+  height: 24px;
+  font-size: 14px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 500;
+  color: #787878;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sect_news .post_details .post_content--details .post_ttl .tags .shiga {
+  border: 2px solid #000;
+  width: 70px;
+  height: 24px;
+  font-size: 14px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 500;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sect_news .post_details .post_content--details .post_ttl .tags .ishikawa {
+  border: 2px solid #ffcd00;
+  width: 70px;
+  height: 24px;
+  font-size: 14px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 500;
+  color: #ffcd00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sect_news .post_details .post_content--details .sing_date {
+  font-size: 46px;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 700;
+}
+
+.sect_news .post_details .post_content--details .sing_ttl {
+  font-size: 22px;
+  font-family: noto-sans-cjk-jp, sans-serif;
+  font-weight: 700;
 }
 
 .sect_news .post_details .post_content img {
