@@ -9,6 +9,34 @@ $('.slider').slick({
     dots: true,
     variableWidth: false,
     rtl: false,
+    responsive : [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+          slideWidth: 425,
+          arrows: false,
+          dots: true,
+          centerMode: false,
+          infinite: true,
+          variableWidth: false,
+        }
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 1.1,
+          centerMode: true,
+          centerMode: '0',
+          slideWidth: 425,
+          arrows: false,
+          dots: true,
+          centerMode: false,
+          infinite: false,
+          variableWidth: false,
+        }
+      }
+    ]
   });
 
 

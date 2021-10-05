@@ -141,7 +141,7 @@
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 470px) {
   .sect_news__container .wp-block-categories-list .cat-item {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -225,7 +225,7 @@
 
 @media only screen and (max-width: 768px) {
   .sect_news__container .wp-block-categories-list .cat-item-nol::before {
-    left: 35%;
+    left: 30%;
   }
 }
 
@@ -265,7 +265,7 @@
 
 @media only screen and (max-width: 768px) {
   .sect_news__container .wp-block-categories-list .cat-item-toyama::before {
-    left: 35%;
+    left: 30%;
   }
 }
 
@@ -305,7 +305,7 @@
 
 @media only screen and (max-width: 768px) {
   .sect_news__container .wp-block-categories-list .cat-item-ishikawa::before {
-    left: 35%;
+    left: 30%;
   }
 }
 
@@ -345,7 +345,7 @@
 
 @media only screen and (max-width: 768px) {
   .sect_news__container .wp-block-categories-list .cat-item-shiga::before {
-    left: 35%;
+    left: 30%;
   }
 }
 

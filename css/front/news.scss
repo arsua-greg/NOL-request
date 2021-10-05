@@ -95,7 +95,7 @@
           justify-content: center;
         }
 
-        @media only screen and(max-width: 750px) {
+        @media only screen and(max-width: 470px) {
           justify-content: flex-end;
           padding: 0 40px 0 0;
         }
@@ -158,7 +158,7 @@
           z-index: -1;
 
           @media only screen and(max-width: 768px) {
-            left: 35%;
+            left: 30%;
           }
         }
         a {
@@ -192,7 +192,7 @@
           z-index: -1;
 
           @media only screen and(max-width: 768px) {
-            left: 35%;
+            left: 30%;
           }
         }
 
@@ -227,7 +227,7 @@
           z-index: -1;
 
           @media only screen and(max-width: 768px) {
-            left: 35%;
+            left: 30%;
           }
         }
 
@@ -262,7 +262,7 @@
           z-index: -1;
 
           @media only screen and(max-width: 768px) {
-            left: 35%;
+            left: 30%;
           }
         }
 
