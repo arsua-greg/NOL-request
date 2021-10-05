@@ -49,7 +49,7 @@
                                 ?>
                             </div>
                             <div class="post_ttl">
-                                <p class="sing_date"><?php echo get_the_date('Y/m/d'); ?></p>
+                                <h1 class="sing_date"><?php echo get_the_date('Y/m/d'); ?></h1>
                                 <div class="tags">
                                     <div class="tag_div">
                                         <?php

@@ -302,7 +302,7 @@
 
             .date {
               font-size: 20px;
-              font-family: "Helvetica", sans-serif;
+              font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
               font-weight: 700;
               padding: 0 25px 0 0;
 
@@ -421,7 +421,7 @@
     .easy-wp-page-navigation a,
     .easy-wp-page-navigation span {
       border: none;
-      font-family: "Helvetica", sans-serif;
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       font-size: 20px;
       font-weight: 700;
     }
@@ -507,6 +507,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+          flex-wrap: wrap;
 
           .tags {
             display: flex;
@@ -584,14 +585,22 @@
 
         .sing_date {
           font-size: 46px;
-          font-family: "Helvetica", sans-serif;
+          font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
           font-weight: 700;
+
+          @media only screen and(max-width: 768px) {
+            width: 100%;
+          }
         }
 
         .sing_ttl {
           font-size: 22px;
           font-family: noto-sans-cjk-jp, sans-serif;
           font-weight: 700;
+
+          @media only screen and(max-width: 768px) {
+            padding: 25px 0 0 0;
+          }
         }
       }
 
@@ -605,6 +614,10 @@
 
       .a-post-img-cont {
         padding: 40px 0;
+
+        @media only screen and(max-width: 768px) {
+          padding: 60px 0 40px 0;
+        }
         img {
           width: 100%;
           padding: 0;
