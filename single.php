@@ -32,37 +32,23 @@
                                 <!-- <?php echo "<img src='" . get_field("cat_image", get_queried_object()) . "'/>"; ?> -->
 
                                 <?php
-                                $term = get_queried_object();
+                                $term = false;
+                                $terms = get_the_terms($post->ID, 'category');
 
+                                if ($terms) {
+                                    $term = $terms[0];
+                                    if ($term->parent) {
 
-                                // vars
-                                $image = get_field('image', $term);
-                                $color = get_field('color', $term);
+                                        $ancestors = get_ancestors($term_id, 'category', 'taxonomy');
+                                        $top_term_id = array_pop($ancestors);
+                                        $term = get_term($top_term_id, 'category');
+                                    }
+                                }
 
-                                $terms = get_the_terms(get_the_ID(), 'category');
-
+                                if ($term) {
+                                    echo "<img src='" . get_field('cat_image', $term) . "'/>";
+                                }
                                 ?>
-
-                                <?php
-                                $terms = get_the_terms(get_the_ID(), 'product_brands');
-
-                                if (!empty($terms)) : ?>
-                                    <ul>
-                                        <?php foreach ($terms as $term) : ?>
-
-                                            <li class="<?php echo $term->slug; ?>">
-
-                                                <img src="<?php the_field('brand_logo', $term); ?>" />
-
-                                            </li>
-
-                                        <?php endforeach; ?>
-                                    </ul>
-                                <?php
-                                endif;
-                                ?>
-
-
                             </div>
                             <div class="post_ttl">
                                 <p class="sing_date"><?php echo get_the_date('Y/m/d'); ?></p>

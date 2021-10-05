@@ -22,7 +22,7 @@
       }
 
       &--content {
-        max-width: 495px;
+        max-width: 100%;
 
         @media only screen and(max-width: 768px) {
           max-width: 100%;
@@ -41,6 +41,11 @@
 
         .slick-dots {
           color: #fff !important;
+        }
+
+        .slick-initialized .slick-slide {
+          padding-right: 25px;
+          height: auto;
         }
 
         .post_content {
