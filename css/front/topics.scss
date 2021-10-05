@@ -8,7 +8,7 @@
       background-color: #000000;
       color: #fff;
       width: 50%;
-      padding: 60px 50px 60px 150px;
+      padding: 60px 50px 60px 0;
 
       @media only screen and(max-width: 768px) {
         width: 100%;
@@ -29,18 +29,55 @@
           font-size: 46px;
           font-family: "Helvetica", sans-serif;
           font-weight: 700;
+          line-height: 1em;
+          padding: 0 0 0 150px;
 
           @media only screen and(max-width: 768px) {
             line-height: 1.2em;
           }
         }
 
+        .arrows {
+          position: relative;
+
+          .slick-dots {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0 0 20px 0;
+            list-style-type: none;
+
+            li {
+              margin: 0 0.25rem;
+            }
+
+            button {
+              display: block;
+              width: 25px;
+              height: 3px;
+              padding: 0;
+              border: none;
+              background-color: #646464;
+              text-indent: -9999px;
+              cursor: pointer;
+            }
+
+            li.slick-active button {
+              background-color: #fff;
+            }
+          }
+        }
+
         .slick-initialized .slick-slide {
-          padding-right: 25px;
           height: auto;
         }
 
         .post_content {
+          margin-right: 50px;
+
           .img {
             padding: 30px 0 35px 0;
 

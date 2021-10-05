@@ -1,34 +1,20 @@
-$(".slider").slick({
-    arrows: true,
-    slidesToShow: 1.1,
+$('.slider').slick({
     centerMode: true,
-    centerPadding: '0',
-    infinite: false,
+    infinite: true,
+    // centerPadding: '0',
+    slidesToShow: .92,
+    slideWidth: 425,
+    speed: 500,
+    arrows: false,
     dots: true,
-    responsive: [
-        {
-            breakpoint: 769,
-            settings: {
-                arrows: false,
-                slidesToShow: 1.3,
-                centerMode: true,
-                centerPadding: '0',
-                infinite: false,
-                dots: true,
-            }
-        },
-        // {
-        //     breakpoint: 500,
-        //     settings: {
-        //         centerPadding: '40px',
-        //     }
-        // },
-        //         {
-        //     breakpoint: 371,
-        //     settings: {
-        //         centerPadding: '30px',
-        //     }
-        // },  
-    ]
-    
-});
+    variableWidth: false,
+    rtl: false,
+  });
+
+
+  $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    console.log('beforeChange', currentSlide, nextSlide);
+  });
+  $('.slider').on('afterChange', function(event, slick, currentSlide){
+    console.log('afterChange', currentSlide);
+  });

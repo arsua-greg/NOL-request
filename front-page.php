@@ -667,14 +667,14 @@
         <div class="sect_topics__container--row_1">
             <div class="sect_topics__container--row_1--content">
                 <h1>Topics</h1>
-                <div class="slider">
+                <div class="slider arrows">
                     <?php
                     $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 
                     $args = array(
                         'post_type' => 'post',
                         'post_status' => 'publish',
-                        'posts_per_page' => 2,
+                        'posts_per_page' => 10,
                         'paged' => $paged,
                     );
 
@@ -684,12 +684,11 @@
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                             <div class="post_content">
                                 <div class="img">
-                                    <?php the_post_thumbnail('medium'); ?>
+                                    <?php the_post_thumbnail('full'); ?>
                                 </div>
                                 <div class="title_cont">
                                     <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
                                     <div class="category">
-
                                         <!-- TAGS -->
                                         <?php
                                         $tags = get_the_tags();
@@ -698,7 +697,6 @@
                                                 <a class="cat" href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>" title="<?php echo esc_attr($tag->name); ?>"><?php echo esc_html($tag->name); ?></a>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
-
 
                                         <!-- CATEGORY -->
                                         <?php foreach ((get_the_category()) as $cat) {
@@ -709,18 +707,17 @@
                                 <p class="content">
                                     タイトルが入りますタイトルが入りますタイトルが入りますタイトルが入ります
                                 </p>
+                                <div class="view_all">
+                                    <a href="<?php echo get_permalink() ?>">
+                                        <p>view more</p>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right.svg" alt="">
+                                    </a>
+                                </div>
                             </div>
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
-                <div class="view_all">
-                    <a href="<?php echo get_permalink(get_page_by_path('NEWS')) ?>">
-                        <p>view more</p>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right.svg" alt="">
-                    </a>
-                </div>
             </div>
-
         </div>
         <div class="sect_topics__container--row_2">
             <div class="sect_topics__container--row_2--content">
