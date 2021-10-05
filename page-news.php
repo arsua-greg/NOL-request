@@ -27,7 +27,7 @@
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 2,
+                    'posts_per_page' => 10,
                     'paged' => $paged,
                 );
 

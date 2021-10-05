@@ -8,9 +8,7 @@
       background-color: #000000;
       color: #fff;
       width: 50%;
-      padding: 60px 50px;
-      display: flex;
-      justify-content: flex-end;
+      padding: 60px 50px 60px 150px;
 
       @media only screen and(max-width: 768px) {
         width: 100%;
@@ -22,8 +20,6 @@
       }
 
       &--content {
-        max-width: 100%;
-
         @media only screen and(max-width: 768px) {
           max-width: 100%;
           width: 100%;
@@ -37,10 +33,6 @@
           @media only screen and(max-width: 768px) {
             line-height: 1.2em;
           }
-        }
-
-        .slick-dots {
-          color: #fff !important;
         }
 
         .slick-initialized .slick-slide {
@@ -231,7 +223,7 @@
       background-color: #282828;
       color: #fff;
       width: 50%;
-      padding: 60px 50px;
+      padding: 60px 150px 60px 50px;
 
       @media only screen and(max-width: 768px) {
         width: 100%;
@@ -243,8 +235,6 @@
       }
 
       &--content {
-        max-width: 495px;
-
         @media only screen and(max-width: 768px) {
           max-width: 100%;
         }

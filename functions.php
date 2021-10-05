@@ -74,6 +74,15 @@ function ourWidgetsInit()
         'before_widget' => '<div class="sect_news__container--tags">',
         'after_widget' => '</div>',
     ));
+
+    register_sidebar(array(
+        'name' => 'Recent Post',
+        'id' => 'recent-post',
+        'before_widget' => '<div class="sidebar-post-list">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="p-sidebar-title">',
+        'after_title' => '</h3>',
+    ));
 }
 
 add_action('widgets_init', 'ourWidgetsInit');

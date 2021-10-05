@@ -32,8 +32,7 @@
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.jpg" sizes="180x180">
 	<title>NOL 公式サイト</title>
 	<!-- SLICK -->
-	<link href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" rel="stylesheet" />
-	<link href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -45,8 +44,6 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front/front.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front/topics.css" type="text/css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front/news.css" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 
 
 	<script>

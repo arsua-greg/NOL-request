@@ -2,7 +2,6 @@
 
 /* Template Name: Single Page */ ?>
 
-
 <div class="sect_news">
     <div class="sect_news__container">
         <div class="sect_news__container--pc">
@@ -30,21 +29,20 @@
                         <div class="post_content--details">
                             <div class="category_image">
                                 <!-- <?php echo "<img src='" . get_field("cat_image", get_queried_object()) . "'/>"; ?> -->
-
                                 <?php
                                 $term = false;
                                 $terms = get_the_terms($post->ID, 'category');
-
+                                // $terms is an array of term object
+                                // use the first term found
                                 if ($terms) {
                                     $term = $terms[0];
                                     if ($term->parent) {
-
+                                        // term is not at the top level
                                         $ancestors = get_ancestors($term_id, 'category', 'taxonomy');
                                         $top_term_id = array_pop($ancestors);
-                                        $term = get_term($top_term_id, 'category');
+                                        $term = get_term($top_term_id, 'category', 'taxonomy');
                                     }
                                 }
-
                                 if ($term) {
                                     echo "<img src='" . get_field('cat_image', $term) . "'/>";
                                 }

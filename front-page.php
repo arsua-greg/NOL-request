@@ -674,7 +674,7 @@
                     $args = array(
                         'post_type' => 'post',
                         'post_status' => 'publish',
-                        'posts_per_page' => 5,
+                        'posts_per_page' => 2,
                         'paged' => $paged,
                     );
 
@@ -684,7 +684,7 @@
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                             <div class="post_content">
                                 <div class="img">
-                                    <?php the_post_thumbnail(); ?>
+                                    <?php the_post_thumbnail('medium'); ?>
                                 </div>
                                 <div class="title_cont">
                                     <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
