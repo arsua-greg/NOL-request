@@ -2,7 +2,7 @@ $('.slider').slick({
     centerMode: true,
     infinite: true,
     // centerPadding: '0',
-    slidesToShow: .96,
+    slidesToShow: 1.9,
     slideWidth: 425,
     speed: 500,
     arrows: false,
@@ -37,7 +37,7 @@ $('.slider').slick({
         }
       },
       {
-        breakpoint: 1441,
+        breakpoint: 1401,
         settings: {
           centerMode: true,
           infinite: true,
@@ -57,7 +57,8 @@ $('.slider').slick({
           centerMode: true,
           infinite: true,
           // centerPadding: '0',
-          slidesToShow: .946,
+          // slidesToShow: .925,
+          slidesToShow: 0.95,
           slideWidth: 425,
           speed: 500,
           arrows: false,

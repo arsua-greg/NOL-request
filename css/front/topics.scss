@@ -12,7 +12,7 @@
 
       @media only screen and(max-width: 768px) {
         width: 100%;
-        padding: 60px 25px 35px 25px;
+        padding: 50px 25px 35px 25px;
       }
 
       @media only screen and(max-width: 1200px) and (min-width: 769px) {
@@ -29,7 +29,7 @@
           font-size: 46px;
           font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
           font-weight: 700;
-          line-height: 1em;
+          line-height: normal;
           padding: 0 0 0 100px;
 
           @media only screen and(max-width: 768px) {
@@ -94,6 +94,7 @@
 
         .post_content {
           margin-right: 50px;
+          position: relative;
 
           @media only screen and(max-width: 768px) {
             margin-right: 0;
@@ -103,12 +104,22 @@
             margin-right: 25px;
           }
 
+          .link-spanner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+
           .img {
             padding: 30px 0 35px 0;
 
             img {
               width: 100%;
-              height: auto;
+              height: 325px;
+              object-fit: cover;
             }
           }
           .title_cont {
@@ -125,6 +136,7 @@
               font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
               color: #fff;
               font-weight: 700;
+              line-height: normal;
 
               @media only screen and(max-width: 768px) {
                 width: 100%;
@@ -144,14 +156,13 @@
               }
 
               .cat {
+                background-color: #e1e1e1;
                 width: 110px;
+                height: 24px;
                 text-align: center;
-                color: #fff;
-                font-weight: 700;
                 font-size: 12px;
                 font-family: noto-sans-cjk-jp, sans-serif;
-                padding: 2px 0;
-                border: 1px solid #fff;
+                font-weight: 700;
 
                 @media only screen and(max-width: 1200px) and(min-width: 769px) {
                   width: 100%;
@@ -244,7 +255,7 @@
         .view_all {
           display: flex;
           justify-content: flex-end;
-          margin-top: -25px;
+          margin-top: 25px;
 
           @media only screen and(max-width: 768px) {
             padding: 20px 0 0 0;
@@ -259,7 +270,7 @@
           a {
             border: 1px solid #fff;
             text-align: center;
-            padding: 12px 0;
+            padding: 6px 0;
             width: 150px;
             display: flex;
             justify-content: center;
@@ -288,7 +299,7 @@
 
       @media only screen and(max-width: 768px) {
         width: 100%;
-        padding: 60px 25px;
+        padding: 50px 25px;
       }
 
       @media only screen and(max-width: 1200px) and (min-width: 769px) {
@@ -306,7 +317,7 @@
           justify-content: space-between;
           flex-wrap: wrap;
 
-          @media only screen and(max-width: 768px) {
+          @media only screen and(max-width: 480px) {
             justify-content: flex-end;
           }
 
@@ -318,8 +329,8 @@
             display: flex;
             justify-content: flex-end;
 
-            @media only screen and(max-width: 768px) {
-              padding: 30px 0 0 0;
+            @media only screen and(max-width: 480px) {
+              padding: 25px 0 0 0;
               margin-top: 0;
             }
 
@@ -351,10 +362,11 @@
           font-size: 46px;
           font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
           font-weight: 700;
+          line-height: normal;
 
-          @media only screen and(max-width: 768px) {
+          @media only screen and(max-width: 480px) {
             width: 100%;
-            line-height: 1em;
+            line-height: normal;
           }
 
           @media only screen and(max-width: 900px) and (min-width: 769px) {
@@ -367,13 +379,10 @@
           background-color: #000000;
           padding: 35px 50px 20px 50px;
           border-bottom: 1px solid #fff;
+          position: relative;
 
           @media only screen and(max-width: 768px) {
             padding: 25px 20px 30px 20px;
-          }
-
-          @media only screen and(min-width: 769px) {
-            padding: 35px 25px 20px 25px;
           }
 
           &:nth-of-type(3) {
@@ -384,6 +393,15 @@
             margin: 20px 0 0 0;
           }
 
+          .link-spanner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+
           &__title_cont {
             display: flex;
             padding: 0 0 18px 0;
@@ -391,6 +409,7 @@
 
             @media only screen and(max-width: 768px) {
               flex-wrap: wrap;
+              padding: 0 0 15px 0;
             }
 
             .ttl {
@@ -398,8 +417,9 @@
               font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
               color: #fff;
               font-weight: 700;
+              line-height: normal;
 
-              @media only screen and(max-width: 768px) {
+              @media only screen and(max-width: 480px) {
                 width: 100%;
               }
             }
@@ -412,19 +432,18 @@
               gap: 10px;
               align-items: center;
 
-              @media only screen and(max-width: 768px) {
+              @media only screen and(max-width: 480px) {
                 padding: 15px 0 0 0;
               }
 
               .cat {
+                background-color: #e1e1e1;
                 width: 110px;
+                height: 24px;
                 text-align: center;
-                color: #fff;
-                font-weight: 700;
                 font-size: 12px;
                 font-family: noto-sans-cjk-jp, sans-serif;
-                padding: 2px 0;
-                border: 1px solid #fff;
+                font-weight: 700;
 
                 @media only screen and(max-width: 1200px) and(min-width: 769px) {
                   width: 100%;
@@ -532,6 +551,7 @@
                 font-weight: 700;
                 color: #fff;
                 padding: 0 10px 0 0;
+                line-height: normal;
               }
 
               img {

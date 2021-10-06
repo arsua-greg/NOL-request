@@ -1,7 +1,4 @@
-<?php
-
-get_header(); ?>
-
+<?php get_header(); ?>
 <div class="sect_news">
     <div class="sect_news__container">
 

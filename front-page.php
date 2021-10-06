@@ -667,23 +667,21 @@
         <div class="sect_topics__container--row_1">
             <div class="sect_topics__container--row_1--content">
                 <h1>Topics</h1>
-                <?php
-                // $show_topics = get_field('post_on_topics');
-                // $tguides_array = explode(",", $show_topics);
-                // var_dump($tguides_array);
-                // var_dump($show_topics);
-                ?>
                 <div class="slider arrows">
                     <?php
                     $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
-                    // $show_topics = get_field('post_on_topics');
-                    // $tguides_array = implode("", $show_topics);
 
                     $args = array(
                         'post_type' => 'post',
                         'post_status' => 'publish',
                         'posts_per_page' => 3,
-                        'post__in' => $tguides_array,
+                        'meta_query' => array(
+                            array(
+                                'key' => 'post_on_topics',
+                                'value' => '1',
+                                'compare' => 'LIKE'
+                            )
+                        ),
                         'paged' => $paged,
                     );
 
@@ -692,8 +690,9 @@
                     <?php if ($the_query->have_posts()) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                             <div class="post_content">
+                                <a href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></a>
                                 <div class="img">
-                                    <?php the_post_thumbnail('full'); ?>
+                                    <?php the_post_thumbnail(); ?>
                                 </div>
                                 <div class="title_cont">
                                     <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
@@ -717,7 +716,7 @@
                                     <?php the_excerpt(); ?>
                                 </p>
                                 <div class="view_all">
-                                    <a href="<?php echo get_permalink() ?>">
+                                    <a href="<?php echo the_permalink(); ?>">
                                         <p>view more</p>
                                         <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right.svg" alt="">
                                     </a>
@@ -755,11 +754,11 @@
                 <?php if ($the_query->have_posts()) : ?>
 
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                        <div class="news_cont">
+                        <div class="news_cont click">
+                            <a href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></a>
                             <div class="news_cont__title_cont">
                                 <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
                                 <div class="category">
-
                                     <!-- TAGS -->
                                     <?php
                                     $tags = get_the_tags();
@@ -776,7 +775,7 @@
                                 </div>
                             </div>
                             <p class="content">
-                                <?php the_title(); ?>
+                                <?php the_excerpt(); ?>
                             </p>
                             <div class="permalink">
                                 <a href="<?php the_permalink(); ?>">

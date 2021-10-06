@@ -47,9 +47,18 @@ function your_themes_pagination()
 }
 
 
+// Add more-link text to excerpt 
+function my_theme_excerpt_more($more)
+{
+    return '&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.';
+}
+add_filter('excerpt_more', 'my_theme_excerpt_more');
+
+// Add excerpt length
+
 function new_excerpt_length($length)
 {
-    return 20;
+    return 32;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
@@ -81,15 +90,6 @@ function ourWidgetsInit()
         'before_widget' => '<div class="sect_news__container--tags">',
         'after_widget' => '</div>',
     ));
-
-    register_sidebar(array(
-        'name' => 'Recent Post',
-        'id' => 'recent-post',
-        'before_widget' => '<div class="sidebar-post-list">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="p-sidebar-title">',
-        'after_title' => '</h3>',
-    ));
 }
 
 add_action('widgets_init', 'ourWidgetsInit');
@@ -98,3 +98,13 @@ add_action('widgets_init', 'ourWidgetsInit');
 add_theme_support('post-thumbnails');
 // add_image_size('small-thumbnail', 100, 100, true);
 the_post_thumbnail(array(100, 100));
+
+
+// CUSTOM STYLES
+
+function wp_list_categories_remove_title_attributes($output)
+{
+    $output = preg_replace('` title="(.+)"`', '', $output);
+    return $output;
+}
+add_filter('wp_list_categories', 'wp_list_categories_remove_title_attributes');

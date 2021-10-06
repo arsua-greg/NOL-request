@@ -24,11 +24,25 @@
 
         <div class="post_details">
             <div class="line"></div>
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php
+            $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+
+            $args = array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 10,
+                'paged' => $paged,
+            );
+
+            $the_query = new WP_Query($args);
+            ?>
+
+            <?php if ($the_query->have_posts()) : ?>
+
+                <?php while (have_posts()) : the_post(); ?>
                     <div class="post_content">
                         <div class="post_content--details">
                             <div class="category_image">
-                                <!-- <?php echo "<img src='" . get_field("cat_image", get_queried_object()) . "'/>"; ?> -->
                                 <?php
                                 $term = false;
                                 $terms = get_the_terms($post->ID, 'category');
