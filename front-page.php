@@ -667,14 +667,23 @@
         <div class="sect_topics__container--row_1">
             <div class="sect_topics__container--row_1--content">
                 <h1>Topics</h1>
+                <?php
+                // $show_topics = get_field('post_on_topics');
+                // $tguides_array = explode(",", $show_topics);
+                // var_dump($tguides_array);
+                // var_dump($show_topics);
+                ?>
                 <div class="slider arrows">
                     <?php
                     $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+                    // $show_topics = get_field('post_on_topics');
+                    // $tguides_array = implode("", $show_topics);
 
                     $args = array(
                         'post_type' => 'post',
                         'post_status' => 'publish',
-                        'posts_per_page' => 10,
+                        'posts_per_page' => 3,
+                        'post__in' => $tguides_array,
                         'paged' => $paged,
                     );
 
@@ -705,7 +714,7 @@
                                     </div>
                                 </div>
                                 <p class="content">
-                                    タイトルが入りますタイトルが入りますタイトルが入りますタイトルが入ります
+                                    <?php the_excerpt(); ?>
                                 </p>
                                 <div class="view_all">
                                     <a href="<?php echo get_permalink() ?>">

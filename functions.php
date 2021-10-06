@@ -47,6 +47,13 @@ function your_themes_pagination()
 }
 
 
+function new_excerpt_length($length)
+{
+    return 20;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+
 //ADD CUSTOM CLASS ON CATEGORY
 add_filter('wp_list_categories', 'add_slug_class_wp_list_categories');
 function add_slug_class_wp_list_categories($list)
