@@ -50,7 +50,7 @@ function your_themes_pagination()
 // Add more-link text to excerpt 
 function my_theme_excerpt_more($more)
 {
-    return '&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.';
+    return '&nbsp;…';
 }
 add_filter('excerpt_more', 'my_theme_excerpt_more');
 

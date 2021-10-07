@@ -98,12 +98,12 @@
 
         @media only screen and(max-width: 470px) {
           justify-content: flex-end;
-          padding: 0 40px 0 0;
+          padding: 0;
         }
 
-        @media only screen and (max-width: 1200px) and (min-width: 769px) {
+        @media only screen and (max-width: 950px) and (min-width: 769px) {
           width: calc(calc(100% / 5) - 10px);
-          padding: 0 25px 0 0;
+          padding: 0;
         }
 
         &:nth-of-type(1) {
@@ -145,6 +145,29 @@
         border: 2px solid #787878;
         order: 2;
         position: relative;
+
+        &::after {
+          content: "";
+          background-color: #787878;
+          color: #fff;
+          width: 0;
+          display: block;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          height: 100%;
+          z-index: -7;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+          a {
+            color: #fff;
+          }
+          &::after {
+            width: 100%;
+          }
+        }
 
         .link-spanner {
           position: absolute;
@@ -200,9 +223,32 @@
       }
 
       .cat-item-toyama {
-        border: 2px solid #008544;
+        border: 2px solid;
         order: 3;
         position: relative;
+
+        &::after {
+          content: "";
+          background-color: #008544;
+          color: #fff;
+          width: 0;
+          display: block;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          height: 100%;
+          z-index: -7;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+          a {
+            color: #fff;
+          }
+          &::after {
+            width: 100%;
+          }
+        }
 
         &.current-cat {
           &::before {
@@ -248,9 +294,32 @@
       }
 
       .cat-item-ishikawa {
-        border: 2px solid #ffcd00;
+        border: 2px solid;
         order: 4;
         position: relative;
+
+        &::after {
+          content: "";
+          background-color: #ffcd00;
+          color: #fff;
+          width: 0;
+          display: block;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          height: 100%;
+          z-index: -7;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+          a {
+            color: #fff;
+          }
+          &::after {
+            width: 100%;
+          }
+        }
 
         &.current-cat {
           &::before {
@@ -299,6 +368,29 @@
         border: 2px solid #000000;
         order: 5;
         position: relative;
+
+        &::after {
+          content: "";
+          background-color: #e1e1e1;
+          color: #fff;
+          width: 0;
+          display: block;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          height: 100%;
+          z-index: -7;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+          a {
+            color: #000;
+          }
+          &::after {
+            width: 100%;
+          }
+        }
 
         &.current-cat {
           &::before {
@@ -355,6 +447,16 @@
 
       &__item {
         padding: 0 0 55px 0;
+        position: relative;
+
+        .link-spanner {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
 
         &--cont {
           padding: 40px;
@@ -362,7 +464,7 @@
           position: relative;
 
           @media only screen and(max-width: 768px) {
-            padding: 40px 20px;
+            padding: 20px;
           }
 
           .link-spanner {
@@ -470,10 +572,18 @@
           }
 
           .permalink {
+            position: relative;
+            z-index: 5;
             a {
               display: flex;
               justify-content: flex-end;
               align-items: center;
+              position: relative;
+              right: 0;
+
+              &:hover {
+                right: -10px;
+              }
 
               p {
                 font-size: 16px;
@@ -521,7 +631,8 @@
         font-size: 14px;
         font-family: noto-sans-cjk-jp, sans-serif;
         font-weight: 700;
-        border: 2px solid #000;
+        border: solid #000;
+        border-width: 2px 1px;
         width: 100px;
         position: relative;
         text-align: center;
@@ -547,7 +658,8 @@
         font-size: 14px;
         font-family: noto-sans-cjk-jp, sans-serif;
         font-weight: 700;
-        border: 2px solid #000;
+        border: solid #000;
+        border-width: 2px 1px;
         width: 100px;
         position: relative;
         text-align: center;
