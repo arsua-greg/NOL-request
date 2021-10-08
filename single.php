@@ -1,12 +1,9 @@
 <?php get_header();
-
 /* Template Name: Single Page */ ?>
-
 <div class="sect_news">
     <div class="sect_news__container">
         <div class="sect_news__container--pc">
             <?php dynamic_sidebar('blog-category'); ?>
-
             <div class="sect_news__container--categories">
                 <?php
                 $tags = get_tags();
@@ -21,25 +18,9 @@
                 <?php endif; ?>
             </div>
         </div>
-
         <div class="post_details">
             <div class="line"></div>
-            <?php
-            $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
-
-            $args = array(
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                'posts_per_page' => 10,
-                'paged' => $paged,
-            );
-
-            $the_query = new WP_Query($args);
-            ?>
-
-            <?php if ($the_query->have_posts()) : ?>
-
-                <?php while (have_posts()) : the_post(); ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="post_content">
                         <div class="post_content--details">
                             <div class="category_image">
@@ -50,9 +31,9 @@
                                 // use the first term found
                                 if ($terms) {
                                     $term = $terms[0];
-                                    if ($term->parent) {
+                                    if ($term->child) {
                                         // term is not at the top level
-                                        $ancestors = get_ancestors($term_id, 'category', 'taxonomy');
+                                        $ancestors = get_ancestors($term_taxonomy, 'category', 'taxonomy');
                                         $top_term_id = array_pop($ancestors);
                                         $term = get_term($top_term_id, 'category', 'taxonomy');
                                     }
