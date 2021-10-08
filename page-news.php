@@ -1,10 +1,7 @@
 <?php get_header(); ?>
-
 <div class="sect_news">
     <div class="sect_news__container">
-
         <?php dynamic_sidebar('blog-category'); ?>
-
         <div class="sect_news__container--categories">
             <?php
             $tags = get_tags();
@@ -18,7 +15,6 @@
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
-
         <div class="news_content">
             <div class="news_content__item">
                 <?php
@@ -27,7 +23,7 @@
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 5,
                     'paged' => $paged,
                 );
 

@@ -25,7 +25,7 @@
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 5,
                     'paged' => $paged,
                 );
 
@@ -33,7 +33,6 @@
                 ?>
 
                 <?php if ($the_query->have_posts()) : ?>
-
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="news_content__item">
                             <div class="news_content__item--cont">
