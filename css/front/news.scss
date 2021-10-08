@@ -724,7 +724,6 @@
               a {
                 img {
                   right: -10px;
-                  transition: 0.3s ease-in-out;
                 }
               }
             }
@@ -753,9 +752,24 @@
       padding: 8px;
     }
 
+    .easy-wp-page-navigation a.prev,
+    .easy-wp-page-navigation a.next {
+      @media only screen and(max-width: 479px) {
+        display: block;
+      }
+    }
+
     ul.easy-wp-page-nav {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+
+      .last-page,
+      .first-page-link {
+        @media only screen and(max-width: 479px) {
+          display: none;
+        }
+      }
     }
 
     .easy-wp-page-nav {

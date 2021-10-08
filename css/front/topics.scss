@@ -20,6 +20,7 @@
       }
 
       &--content {
+        position: relative;
         @media only screen and(max-width: 768px) {
           max-width: 100%;
           width: 100%;
@@ -352,6 +353,19 @@
             line-height: 30px;
             text-align: justify;
           }
+
+          &:hover {
+            .view_all {
+              .btn {
+                a {
+                  img {
+                    right: -20px;
+                    transition: 0.3s ease-in-out;
+                  }
+                }
+              }
+            }
+          }
         }
 
         .view_all {
@@ -381,11 +395,6 @@
             a {
               position: relative;
               right: 0;
-
-              &:hover {
-                right: -10px;
-                transition: all 0.3s ease-in-out;
-              }
 
               p {
                 color: #fff;
@@ -462,6 +471,10 @@
               padding: 6px 30px 6px 20px;
               display: flex;
               justify-content: center;
+
+              @media only screen and(max-width: 768px) {
+                padding: 6px 40px 6px 33px;
+              }
 
               a {
                 position: relative;
