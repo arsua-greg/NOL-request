@@ -36,8 +36,8 @@
 
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="news_content__item">
-
                             <div class="news_content__item--cont">
+                                <a href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></a>
                                 <div class="title">
                                     <p class="date"><?php echo get_the_date('Y.m.d'); ?></p>
 

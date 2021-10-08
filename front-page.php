@@ -716,10 +716,12 @@
                                     <?php the_excerpt(); ?>
                                 </p>
                                 <div class="view_all">
-                                    <a href="<?php echo the_permalink(); ?>">
-                                        <p>view more</p>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right.svg" alt="">
-                                    </a>
+                                    <div class="btn">
+                                        <a href="<?php echo the_permalink(); ?>">
+                                            <p>view more</p>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right.svg" alt="">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         <?php endwhile; ?>
@@ -732,10 +734,12 @@
                 <div class="sect_topics__container--row_2--content--title">
                     <h1>Latest News</h1>
                     <div class="view_all">
-                        <a href="<?php echo get_permalink(get_page_by_path('NEWS')) ?>">
-                            <p>view all</p>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right.svg" alt="">
-                        </a>
+                        <div class="btn">
+                            <a href="<?php echo get_permalink(get_page_by_path('NEWS')) ?>">
+                                <p>view all</p>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right.svg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <?php
