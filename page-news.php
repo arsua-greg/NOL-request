@@ -27,7 +27,7 @@
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 2,
+                    'posts_per_page' => 10,
                     'paged' => $paged,
                 );
 
@@ -71,11 +71,13 @@
                             </div>
                         </div>
                     <?php endwhile; ?>
+                    <div class="pagination">
+                        <?php echo easy_wp_pagenavigation($the_query); ?>
+                    </div>
+                <?php endif; ?>
             </div>
-            <div class="pagination">
-                <?php echo easy_wp_pagenavigation($the_query); ?>
-            </div>
-        <?php endif; ?>
+
+
         </div>
     </div>
 </div>

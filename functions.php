@@ -98,13 +98,3 @@ add_action('widgets_init', 'ourWidgetsInit');
 add_theme_support('post-thumbnails');
 // add_image_size('small-thumbnail', 100, 100, true);
 the_post_thumbnail(array(100, 100));
-
-
-// CUSTOM STYLES
-
-function wp_list_categories_remove_title_attributes($output)
-{
-    $output = preg_replace('` title="(.+)"`', '', $output);
-    return $output;
-}
-add_filter('wp_list_categories', 'wp_list_categories_remove_title_attributes');

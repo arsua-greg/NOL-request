@@ -71,6 +71,9 @@
                             </div>
                         </div>
                     <?php endwhile; ?>
+                    <div class="pagination">
+                        <?php echo easy_wp_pagenavigation($the_query); ?>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>
