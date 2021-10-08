@@ -6,7 +6,7 @@ $('.slider').slick({
   slideWidth: 425,
   speed: 500,
   arrows: false,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 5000,
   dots: true,
   variableWidth: false,
