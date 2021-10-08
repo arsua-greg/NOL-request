@@ -380,9 +380,11 @@
 
             a {
               position: relative;
+              right: 0;
 
               &:hover {
                 right: -10px;
+                transition: all 0.3s ease-in-out;
               }
 
               p {
@@ -463,9 +465,11 @@
 
               a {
                 position: relative;
+                right: 0;
 
                 &:hover {
                   right: -10px;
+                  transition: all 0.3s ease-in-out;
                 }
 
                 p {
@@ -785,6 +789,8 @@
                 width: 15px;
                 position: relative;
                 top: 1px;
+                right: 0;
+                transition: 0.3s ease-in-out;
               }
             }
           }
@@ -794,6 +800,7 @@
               a {
                 img {
                   right: -10px;
+                  transition: 0.3s ease-in-out;
                 }
               }
             }

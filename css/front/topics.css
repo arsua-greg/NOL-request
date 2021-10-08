@@ -485,10 +485,13 @@
 
 .sect_topics__container--row_1--content .view_all .btn a {
   position: relative;
+  right: 0;
 }
 
 .sect_topics__container--row_1--content .view_all .btn a:hover {
   right: -10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .sect_topics__container--row_1--content .view_all .btn a p {
@@ -600,10 +603,13 @@
 
 .sect_topics__container--row_2--content--title .view_all .btn a {
   position: relative;
+  right: 0;
 }
 
 .sect_topics__container--row_2--content--title .view_all .btn a:hover {
   right: -10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .sect_topics__container--row_2--content--title .view_all .btn a p {
@@ -991,9 +997,14 @@
   width: 15px;
   position: relative;
   top: 1px;
+  right: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .sect_topics__container--row_2--content .news_cont:hover .permalink a img {
   right: -10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 /*# sourceMappingURL=topics.css.map */
