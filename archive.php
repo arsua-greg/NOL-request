@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 <div class="sect_news">
     <div class="sect_news__container">
-
         <?php dynamic_sidebar('blog-category'); ?>
-
         <div class="sect_news__container--categories">
             <?php
             $tags = get_tags();
@@ -25,7 +23,7 @@
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 5,
+                    'posts_per_page' => 2,
                     'paged' => $paged,
                 );
 
@@ -33,13 +31,12 @@
                 ?>
 
                 <?php if ($the_query->have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                         <div class="news_content__item">
                             <div class="news_content__item--cont">
                                 <a href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></a>
                                 <div class="title">
                                     <p class="date"><?php echo get_the_date('Y.m.d'); ?></p>
-
                                     <!-- GET POST TAG -->
                                     <div class="tag_div">
                                         <?php
@@ -51,7 +48,6 @@
                                         <?php endif; ?>
                                     </div>
                                     <!-- END POST TAG -->
-
                                     <!-- GET CATEGORY NAME -->
                                     <?php foreach ((get_the_category()) as $cat) {
                                         echo $sep . '<a href="' . get_category_link($cat->term_id) . '"  class="' . $cat->slug . '" ' . esc_attr($cat->name) . '">' . $cat->cat_name . '</a>';
@@ -71,10 +67,10 @@
                         </div>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
-                    <div class="pagination">
-                        <?php echo easy_wp_pagenavigation($the_query); ?>
-                    </div>
                 <?php endif; ?>
+                <div class="pagination">
+                    <?php echo easy_wp_pagenavigation($the_query); ?>
+                </div>
             </div>
         </div>
     </div>
