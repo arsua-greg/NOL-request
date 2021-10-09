@@ -70,6 +70,7 @@
                         </div>
                     </div>
                 <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
                 <div class="line"></div>
                 <div class="p-pagination">
                     <div class="p-pagination-width post-left post-pad-left">

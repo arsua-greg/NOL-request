@@ -67,6 +67,7 @@
                             </div>
                         </div>
                     <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
                     <div class="pagination">
                         <?php echo easy_wp_pagenavigation($the_query); ?>
                     </div>
